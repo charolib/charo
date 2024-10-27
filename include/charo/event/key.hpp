@@ -1,0 +1,46 @@
+#pragma once
+
+#include <cstdint>
+#include <deque>
+#include <vector>
+#include <chrono>
+
+namespace charo {
+enum class KEYS {
+    NUL = 0, SOH, STX, ETX, EOT, ENQ, ACK, BEL, BACKSPACE, HTAB, LF, VTAB, FF, CR, SO, SI,
+    DLE, DC1, DC2, DC3, DC4, NAK, SYN, ETB, CAN, EM, SUB, ESC, FS, GS, RS, US,
+    SPACE, EXCLAMATION_MARK, DOUBLE_QUOTES, NUMBER_SIGN, DOLLAR_SIGN, PERCENT, AMPERSAND, SINGLE_QUOTE,
+    LEFT_PARENTHESIS, RIGHT_PARENTHESIS, ASTERISK, PLUS, COMMA, MINUS, PERIOD, FORWARD_SLASH,
+    ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE,
+    COLON, SEMICOLON, LESS_THAN, EQUALS, GREATER_THAN, QUESTION_MARK, AT,
+    UPPERCASE_A, UPPERCASE_B, UPPERCASE_C, UPPERCASE_D, UPPERCASE_E, UPPERCASE_F, UPPERCASE_G, UPPERCASE_H,
+    UPPERCASE_I, UPPERCASE_J, UPPERCASE_K, UPPERCASE_L, UPPERCASE_M, UPPERCASE_N, UPPERCASE_O, UPPERCASE_P,
+    UPPERCASE_Q, UPPERCASE_R, UPPERCASE_S, UPPERCASE_T, UPPERCASE_U, UPPERCASE_V, UPPERCASE_W, UPPERCASE_X,
+    UPPERCASE_Y, UPPERCASE_Z,
+    LEFT_BRACKET, BACKSLASH, RIGHT_BRACKET, CARET, UNDERSCORE, GRAVE_ACCENT,
+    LOWERCASE_A, LOWERCASE_B, LOWERCASE_C, LOWERCASE_D, LOWERCASE_E, LOWERCASE_F, LOWERCASE_G, LOWERCASE_H,
+    LOWERCASE_I, LOWERCASE_J, LOWERCASE_K, LOWERCASE_L, LOWERCASE_M, LOWERCASE_N, LOWERCASE_O, LOWERCASE_P,
+    LOWERCASE_Q, LOWERCASE_R, LOWERCASE_S, LOWERCASE_T, LOWERCASE_U, LOWERCASE_V, LOWERCASE_W, LOWERCASE_X,
+    LOWERCASE_Y, LOWERCASE_Z,
+    LEFT_CURLY_BRACE, VERTICAL_BAR, RIGHT_CURLY_BRACE, TILDE, DELETE = 127
+};
+
+class KeyHandler {
+private:
+    KEYS current_key;
+
+    static constexpr size_t combo_size = 10;
+    std::deque<KEYS> combo;
+
+    std::chrono::steady_clock::time_point last_update;
+    std::chrono::milliseconds combo_timeout;
+public:
+    KeyHandler() : last_update(std::chrono::steady_clock::now()), combo_timeout{300} {};
+
+    void handle();
+    
+    [[nodiscard]] auto get_pressed() const -> KEYS;
+    [[nodiscard]] auto get_combo(size_t count) const -> std::vector<KEYS>;
+};
+
+}
