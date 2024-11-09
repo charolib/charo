@@ -1,7 +1,6 @@
 #include <charo/render/screen.hpp>
-#include <charo/render/base/converter.hpp>
+#include <charo/render/converter.hpp>
 #include <charo/render/escape.hpp>
-
 #include <string>
 
 charo::Screen::Screen() : current{Size{}}, next{Size{}} {}
@@ -13,7 +12,7 @@ void charo::Screen::resize(charo::Size size) {
 }
 
 void charo::Screen::next_frame() noexcept {
-    current = std::move(next);
+    current = next;
     next.reset();
 }
 
@@ -25,7 +24,7 @@ auto charo::Screen::screen_diff() const -> ScreenDiff {
     ScreenDiff diff;
     Pos pos;
 
-    for (Glyph const& glyph : next) {
+    for (Glyph const& glyph : next) { 
         if (glyph != current[pos]) {
             diff.emplace_back(pos, glyph);
         }
@@ -33,6 +32,47 @@ auto charo::Screen::screen_diff() const -> ScreenDiff {
     }
 
     return diff;
+}
+
+auto charo::Screen::in_bounds(Pos pos) const -> bool {
+    return next.in_bounds(pos);
+}
+
+void charo::Screen::draw(Pos pos, Glyph const& glyph) {
+    next[pos] = glyph;
+}
+
+void charo::Screen::draw(Pos pos, char const ch, Style const& style) {
+    draw(pos, Glyph{ch, style});
+}
+
+void charo::Screen::draw(Pos pos, char32_t ch, Style const& style) {
+    draw(pos, Glyph{ch, style});
+}
+
+void charo::Screen::draw(Pos pos, std::string_view str, Style const& style) {
+    for (auto const ch : str) {
+        if (!next.in_bounds(pos)) 
+            break;
+
+        draw(pos, Glyph{ch, style});
+        pos.x++;
+    }
+}
+
+void charo::Screen::draw(Pos pos, std::u32string_view str, Style const& style) {
+    for (auto const ch : str) {
+        if (!next.in_bounds(pos)) 
+            break;
+
+        draw(pos, Glyph{ch, style});
+        pos.x++;
+
+        if (ch > 0xFFFF) {
+            draw(pos, Glyph{'\0', style});
+            pos.x++;
+        }
+    }
 }
 
 void charo::draw_screen_diff(Screen::ScreenDiff const& screen_diff) {
@@ -43,10 +83,14 @@ void charo::draw_screen_diff(Screen::ScreenDiff const& screen_diff) {
     for (auto const& [pos, glyph] : screen_diff) {
         out.append(escape::get_escape(pos));
         out.append(escape::get_escape(glyph.style.effects));
-        out.append(escape::get_escape(glyph.style.fg));
-        out.append(escape::get_escape(glyph.style.bg));
+        if (!glyph.style.fg.is_default)
+            out.append(escape::get_escape(glyph.style.fg));
+        if (!glyph.style.bg.is_default)
+            out.append(escape::get_escape(glyph.style.bg));
         out.append(to_utf8(glyph.data));
+        out.append("\033[0m");
     }
 
     escape::write(out);
+    escape::flush();
 }

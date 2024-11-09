@@ -9,3 +9,4 @@ namespace charo {
     auto to_utf32(char ch) -> char32_t;
     auto to_utf32(std::string_view str) -> std::u32string;
 }
+

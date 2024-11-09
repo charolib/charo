@@ -1,9 +1,10 @@
-#include <charo/render/base/glyphspace.hpp>
+#include <charo/render/glyphspace.hpp>
 #include <stdexcept>
 
 charo::GlyphSpace::GlyphSpace(Size size) : data_(size.h), size_{size} {}
 
 void charo::GlyphSpace::resize(Size new_size) {
+    size_ = std::move(new_size);
     data_.resize(new_size.count());
     data_.shrink_to_fit();
 }
@@ -27,6 +28,11 @@ auto charo::GlyphSpace::width() const -> Size::data_t {
 
 auto charo::GlyphSpace::height() const -> Size::data_t {
     return size_.h;
+}
+
+auto charo::GlyphSpace::in_bounds(Pos pos) const -> bool {
+    size_t const glyph_idx = pos.x + (pos.y * size_.w);
+    return (glyph_idx <= data_.size());
 }
 
 auto charo::GlyphSpace::operator[](Pos pos) -> Glyph& {

@@ -1,5 +1,5 @@
 #include <charo/render/escape.hpp>
-#include <charo/render/base/converter.hpp>
+#include <charo/render/converter.hpp>
 
 auto charo::escape::get_escape(charo::Pos pos) -> std::string {
     std::string out = "\033[" + std::to_string(pos.y + 1) + ';' + std::to_string(pos.x + 1) + 'H';
@@ -7,29 +7,28 @@ auto charo::escape::get_escape(charo::Pos pos) -> std::string {
 }
 
 auto charo::escape::get_escape(Effects flags) -> std::string {
-    // Create new and off previous styles
     std::string out{"\033[22;23;24;25;27;28;29;"};
     
-    if (!(flags & EffectFlags::NONE)) {
-        if (flags & EffectFlags::STANDOUT)
+    if (!(flags & FLAG_NONE)) {
+        if (flags & FLAG_STANDOUT)
             out.append("1;7;");
-        if (flags & EffectFlags::BOLD)
+        if (flags & FLAG_BOLD)
             out.append("1;");
-        if (flags & EffectFlags::DIM)
+        if (flags & FLAG_DIM)
             out.append("2;");
-        if (flags & EffectFlags::ITALIC)
+        if (flags & FLAG_ITALIC)
             out.append("3;");
-        if (flags & EffectFlags::UNDERLINE)
+        if (flags & FLAG_UNDERLINE)
             out.append("4;");
-        if (flags & EffectFlags::BLINK)
+        if (flags & FLAG_BLINK)
             out.append("5;");
-        if (flags & EffectFlags::INVERSE)
+        if (flags & FLAG_INVERSE)
             out.append("7;");
-        if (flags & EffectFlags::HIDDEN)
+        if (flags & FLAG_HIDDEN)
             out.append("8;");
-        if (flags & EffectFlags::CROSSED_OUT)
+        if (flags & FLAG_CROSSED_OUT)
             out.append("9;");
-        if (flags & EffectFlags::DOUBLE_UNDERLINE)
+        if (flags & FLAG_DOUBLE_UNDERLINE)
             out.append("21;");
     }
 
@@ -53,6 +52,11 @@ auto charo::escape::get_escape(BGColor<ColorRGB> color) -> std::string {
                         std::to_string(color.g) + ";" + 
                         std::to_string(color.b) + "m");
     return out;
+}
+
+void charo::escape::set_cursor_pos(Pos pos) {
+    std::string esc_pos = "\033[" + std::to_string(pos.y + 1) + ';' + std::to_string(pos.x + 1) + 'H';
+    write(esc_pos);
 }
 
 void charo::escape::write(char ch) {

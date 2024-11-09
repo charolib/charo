@@ -44,15 +44,16 @@ endif()
 list(APPEND HEADER_FILES
     include/charo/event/key.hpp
     include/charo/event/events.hpp
-    include/charo/render/base/common_types.hpp
-    include/charo/render/base/converter.hpp
-    include/charo/render/base/glyph.hpp
-    include/charo/render/base/glyphspace.hpp
-    include/charo/render/style/color.hpp
-    include/charo/render/style/effect.hpp
-    include/charo/render/style/style.hpp
+    include/charo/render/common_types.hpp
+    include/charo/render/converter.hpp
+    include/charo/render/glyph.hpp
+    include/charo/render/glyphspace.hpp
+    include/charo/render/color.hpp
+    include/charo/render/effect.hpp
+    include/charo/render/style.hpp
     include/charo/render/escape.hpp
     include/charo/render/screen.hpp
+    include/charo/render/widgets.hpp
     include/charo/terminal.hpp
     include/charo/charo.hpp
 )
@@ -60,10 +61,17 @@ list(APPEND HEADER_FILES
 list(APPEND SOURCE_FILES
     src/event/key.cpp
     src/event/events.cpp
-    src/render/base/converter.cpp
-    src/render/base/glyphspace.cpp
+    src/render/converter.cpp
+    src/render/glyphspace.cpp
     src/render/escape.cpp
     src/render/screen.cpp
+    src/render/widgets.cpp
+    
+    src/render/widgets/text.cpp
+    src/render/widgets/text_styled.cpp
+    src/render/widgets/button.cpp
+    src/render/widgets/checkbox.cpp
+
     src/terminal.cpp
 )
 

@@ -26,12 +26,10 @@ public:
     [[nodiscard]] auto size() const -> Size;
     [[nodiscard]] auto width() const -> Size::data_t;
     [[nodiscard]] auto height() const -> Size::data_t;
+    [[nodiscard]] auto in_bounds(Pos pos) const -> bool;
 
     [[nodiscard]] auto operator[](Pos pos) -> Glyph&;
     [[nodiscard]] auto operator[](Pos pos) const -> Glyph;
-
-    [[nodiscard]] auto at(Pos pos) -> Glyph&;
-    [[nodiscard]] auto at(Pos pos) const -> Glyph;
 
     [[nodiscard]] auto begin() -> iterator;
     [[nodiscard]] auto end() -> iterator;

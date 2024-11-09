@@ -7,15 +7,14 @@ void charo::KeyHandler::handle() {
     const auto now = std::chrono::steady_clock::now();
     if (std::chrono::duration_cast<std::chrono::milliseconds>(now - last_update) >= combo_timeout) {
         combo.clear();
-        std::cerr << "combo clear" << combo.size();
     }
 
     fd_set read_set;
     FD_ZERO(&read_set);
     FD_SET(STDIN_FILENO, &read_set);
     struct timeval timeout;
-    timeout.tv_sec = 3;
-    timeout.tv_usec = 0;
+    timeout.tv_sec = 0;
+    timeout.tv_usec = 500;
 
     current_key = KEYS::NUL;
     if (select(STDIN_FILENO + 1, &read_set, NULL, NULL, &timeout) > 0)
