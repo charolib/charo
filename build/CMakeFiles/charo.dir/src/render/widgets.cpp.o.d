@@ -3,7 +3,8 @@ CMakeFiles/charo.dir/src/render/widgets.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/tery/Projects/cpp/charo/include/charo/terminal.hpp \
  /home/tery/Projects/cpp/charo/include/charo/context.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/common_types.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/render/layout.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/common_types.hpp \
  /usr/include/c++/14.2.1/cstdint \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \

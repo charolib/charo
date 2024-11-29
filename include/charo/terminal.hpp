@@ -1,8 +1,8 @@
 #pragma once
-#include "charo/context.hpp"
-#include "charo/render/screen.hpp"
-#include <charo/render/common_types.hpp>
-
+#include <charo/common_types.hpp>
+#include <charo/internal/screen.hpp>
+#include <charo/internal/context.hpp>
+#include <charo/internal/style.hpp>
 #include <memory>
 
 namespace charo {
@@ -14,11 +14,14 @@ private:
     //     COLORRGB
     // };
     // COLOR_MODES colormode = COLOR_MODES::COLORRGB;
-    Screen screen;
-    CharoContext context;
+    Screen screen_;
+    Context context_;
+    Style style_;
 
     struct impl;
-    std::unique_ptr<impl> pimpl;
+    std::unique_ptr<impl> pimpl_;
+    //  EventsSystem events;
+    //  struct termios orig_termios;
 
 public:
     [[nodiscard]] static auto instance() -> Terminal& {
@@ -31,11 +34,13 @@ public:
 
     [[nodiscard]] auto read_event(std::string_view name) const -> bool;
 
-    void refresh();
+    bool refresh();
 
     [[nodiscard]] auto size() const -> Size;
-    [[nodiscard]] auto current_screen() -> Screen&;
-    [[nodiscard]] auto current_context() -> CharoContext&;
+    [[nodiscard]] auto screen() -> Screen&;
+    [[nodiscard]] auto layout() -> Layout;
+    [[nodiscard]] auto context() -> Context&;
+    [[nodiscard]] auto style() -> Style&;
 
     void move_cursor(Pos pos);
 };
@@ -43,13 +48,14 @@ public:
 [[nodiscard, maybe_unused]] static auto get_terminal() -> Terminal& {
     return Terminal::instance();
 }
-
 [[nodiscard, maybe_unused]] static auto get_current_screen() -> Screen& {
-    return get_terminal().current_screen();
+    return get_terminal().screen();
 }
-
-[[nodiscard, maybe_unused]] static auto get_current_context() -> CharoContext& {
-    return get_terminal().current_context();
+[[nodiscard, maybe_unused]] static auto get_current_context() -> Context& {
+    return get_terminal().context();
+}
+[[nodiscard, maybe_unused]] static auto get_current_style() -> Style& {
+    return get_terminal().style();
 }
 
 auto read_event(std::string_view name) -> bool;

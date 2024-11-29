@@ -1,11 +1,10 @@
 #pragma once
-
-#include <cstdint>
 #include <deque>
 #include <vector>
 #include <chrono>
 
 namespace charo {
+    
 enum class KEYS {
     NUL = 0, SOH, STX, ETX, EOT, ENQ, ACK, BEL, BACKSPACE, HTAB, LF, VTAB, FF, CR, SO, SI,
     DLE, DC1, DC2, DC3, DC4, NAK, SYN, ETB, CAN, EM, SUB, ESC, FS, GS, RS, US,

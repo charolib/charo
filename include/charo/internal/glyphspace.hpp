@@ -1,10 +1,10 @@
 #pragma once
-#include "common_types.hpp"
-#include "glyph.hpp"
-
+#include <charo/common_types.hpp>
+#include <charo/internal/glyph.hpp>
 #include <vector>
 
 namespace charo {
+
 class GlyphSpace {
 private:
     using data_t = std::vector<Glyph>;
@@ -15,6 +15,7 @@ private:
     Size size_;
 
 public:
+    GlyphSpace() = default;
     explicit GlyphSpace(Size size);
 
     void resize(Size new_size);

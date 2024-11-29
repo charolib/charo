@@ -1,4 +1,4 @@
-#include <charo/event/events.hpp>
+#include <charo/internal/event/events.hpp>
 
 void charo::EventsSystem::process() {
     keyhandler.handle();

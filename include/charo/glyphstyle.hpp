@@ -1,5 +1,4 @@
 #pragma once
-
 #include <cstdint>
 
 namespace charo {
@@ -63,4 +62,40 @@ struct BGColor<ColorRGB> : public ColorRGB {
 
     bool is_default = true;
 };
+
+
+using Flags = uint16_t;
+enum FlagsEnum : uint16_t {
+    FLAG_NONE                = 0,
+    FLAG_STANDOUT            = 1 << 0,
+    FLAG_BOLD                = 1 << 1,
+    FLAG_ITALIC              = 1 << 2,
+    FLAG_DIM                 = 1 << 3,
+    FLAG_UNDERLINE           = 1 << 4,
+    FLAG_BLINK               = 1 << 5,
+    FLAG_INVERSE             = 1 << 6,
+    FLAG_HIDDEN              = 1 << 7,
+    FLAG_CROSSED_OUT         = 1 << 8,
+    FLAG_DOUBLE_UNDERLINE    = 1 << 9
+};
+
+
+struct GlyphStyle {
+    FGColor<ColorRGB> fg = {};
+    BGColor<ColorRGB> bg = {};
+    Flags effects = FLAG_NONE;
+
+    [[nodiscard]] constexpr auto is_empty() const -> bool {
+        return fg.is_default && bg.is_default && effects == FLAG_NONE;
+    }
+
+    friend constexpr bool operator==(GlyphStyle const& lhs, GlyphStyle const& rhs) {
+        return (lhs.fg == rhs.fg) && (lhs.bg == rhs.bg) && (lhs.effects == rhs.effects);
+    }
+
+    friend constexpr bool operator!=(GlyphStyle const& lhs, GlyphStyle const& rhs) {
+        return (lhs.fg != rhs.fg) || (lhs.bg != rhs.bg) || (lhs.effects != rhs.effects);
+    }
+};
+
 }

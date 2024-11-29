@@ -1,7 +1,7 @@
-#include <charo/render/glyphspace.hpp>
+#include <charo/internal/glyphspace.hpp>
 #include <stdexcept>
 
-charo::GlyphSpace::GlyphSpace(Size size) : data_(size.h), size_{size} {}
+charo::GlyphSpace::GlyphSpace(Size size) : data_(size.y), size_{size} {}
 
 void charo::GlyphSpace::resize(Size new_size) {
     size_ = std::move(new_size);
@@ -23,27 +23,27 @@ auto charo::GlyphSpace::size() const -> Size {
 }
 
 auto charo::GlyphSpace::width() const -> Size::data_t {
-    return size_.w;
+    return size_.x;
 }
 
 auto charo::GlyphSpace::height() const -> Size::data_t {
-    return size_.h;
+    return size_.y;
 }
 
 auto charo::GlyphSpace::in_bounds(Pos pos) const -> bool {
-    size_t const glyph_idx = pos.x + (pos.y * size_.w);
+    size_t const glyph_idx = pos.x + (pos.y * size_.x);
     return (glyph_idx <= data_.size());
 }
 
 auto charo::GlyphSpace::operator[](Pos pos) -> Glyph& {
-    size_t const glyph_idx = pos.x + (pos.y * size_.w);
+    size_t const glyph_idx = pos.x + (pos.y * size_.x);
     if (glyph_idx > data_.size())
         throw std::out_of_range("Given glyph pos in GlyphSpace::operator() out of bounds");
     return data_[glyph_idx];
 }
 
 auto charo::GlyphSpace::operator[](Pos pos) const -> Glyph {
-    size_t const glyph_idx = pos.x + (pos.y * size_.w);
+    size_t const glyph_idx = pos.x + (pos.y * size_.x);
     if (glyph_idx > data_.size())
         throw std::out_of_range("Given glyph pos in GlyphSpace::operator() out of bounds");
     return data_[glyph_idx];

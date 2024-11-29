@@ -3,8 +3,7 @@ examples/simple_project/CMakeFiles/simple_project_example.dir/main.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/tery/Projects/cpp/charo/include/charo/charo.hpp \
  /home/tery/Projects/cpp/charo/include/charo/terminal.hpp \
- /home/tery/Projects/cpp/charo/include/charo/context.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/common_types.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/common_types.hpp \
  /usr/include/c++/14.2.1/cstdint \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -66,43 +65,47 @@ examples/simple_project/CMakeFiles/simple_project_example.dir/main.cpp.o: \
  /usr/include/c++/14.2.1/bits/ostream_insert.h \
  /usr/include/c++/14.2.1/bits/cxxabi_forced.h \
  /usr/include/c++/14.2.1/bits/string_view.tcc \
- /usr/include/c++/14.2.1/functional \
- /usr/include/c++/14.2.1/bits/stl_function.h \
- /usr/include/c++/14.2.1/backward/binders.h /usr/include/c++/14.2.1/tuple \
- /usr/include/c++/14.2.1/bits/uses_allocator.h \
- /usr/include/c++/14.2.1/bits/invoke.h \
- /usr/include/c++/14.2.1/bits/ranges_util.h \
+ /home/tery/Projects/cpp/charo/include/charo/internal/screen.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/glyphspace.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/glyph.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/glyphstyle.hpp \
+ /usr/include/c++/14.2.1/vector /usr/include/c++/14.2.1/bits/allocator.h \
+ /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
+ /usr/include/c++/14.2.1/bits/new_allocator.h \
+ /usr/include/c++/14.2.1/bits/stl_uninitialized.h \
+ /usr/include/c++/14.2.1/ext/alloc_traits.h \
+ /usr/include/c++/14.2.1/bits/alloc_traits.h \
+ /usr/include/c++/14.2.1/bits/stl_vector.h \
+ /usr/include/c++/14.2.1/bits/stl_bvector.h \
  /usr/include/c++/14.2.1/bits/refwrap.h \
+ /usr/include/c++/14.2.1/bits/invoke.h \
+ /usr/include/c++/14.2.1/bits/stl_function.h \
+ /usr/include/c++/14.2.1/backward/binders.h \
+ /usr/include/c++/14.2.1/bits/vector.tcc \
+ /usr/include/c++/14.2.1/bits/memory_resource.h \
+ /usr/include/c++/14.2.1/cstddef \
+ /usr/include/c++/14.2.1/bits/uses_allocator.h \
+ /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
+ /usr/include/c++/14.2.1/tuple /usr/include/c++/14.2.1/bits/ranges_util.h \
+ /home/tery/Projects/cpp/charo/include/charo/internal/layout.hpp \
+ /usr/include/c++/14.2.1/utility \
+ /usr/include/c++/14.2.1/bits/stl_relops.h \
+ /home/tery/Projects/cpp/charo/include/charo/internal/context.hpp \
+ /usr/include/c++/14.2.1/functional \
  /usr/include/c++/14.2.1/bits/std_function.h \
  /usr/include/c++/14.2.1/typeinfo /usr/include/c++/14.2.1/unordered_map \
  /usr/include/c++/14.2.1/bits/unordered_map.h \
  /usr/include/c++/14.2.1/bits/hashtable.h \
  /usr/include/c++/14.2.1/bits/hashtable_policy.h \
  /usr/include/c++/14.2.1/ext/aligned_buffer.h \
- /usr/include/c++/14.2.1/ext/alloc_traits.h \
- /usr/include/c++/14.2.1/bits/alloc_traits.h \
- /usr/include/c++/14.2.1/bits/allocator.h \
- /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
- /usr/include/c++/14.2.1/bits/new_allocator.h \
  /usr/include/c++/14.2.1/bits/enable_special_members.h \
  /usr/include/c++/14.2.1/bits/node_handle.h \
- /usr/include/c++/14.2.1/bits/erase_if.h \
- /usr/include/c++/14.2.1/bits/memory_resource.h \
- /usr/include/c++/14.2.1/cstddef \
- /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
- /usr/include/c++/14.2.1/vector \
- /usr/include/c++/14.2.1/bits/stl_uninitialized.h \
- /usr/include/c++/14.2.1/bits/stl_vector.h \
- /usr/include/c++/14.2.1/bits/stl_bvector.h \
- /usr/include/c++/14.2.1/bits/vector.tcc /usr/include/c++/14.2.1/array \
- /home/tery/Projects/cpp/charo/include/charo/render/screen.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/glyphspace.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/glyph.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/style.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/color.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/effect.hpp \
- /usr/include/c++/14.2.1/utility \
- /usr/include/c++/14.2.1/bits/stl_relops.h /usr/include/c++/14.2.1/memory \
+ /usr/include/c++/14.2.1/bits/erase_if.h /usr/include/c++/14.2.1/array \
+ /home/tery/Projects/cpp/charo/include/charo/internal/style.hpp \
+ /usr/include/c++/14.2.1/map /usr/include/c++/14.2.1/bits/stl_tree.h \
+ /usr/include/c++/14.2.1/bits/stl_map.h \
+ /usr/include/c++/14.2.1/bits/stl_multimap.h \
+ /usr/include/c++/14.2.1/memory \
  /usr/include/c++/14.2.1/bits/stl_tempbuf.h \
  /usr/include/c++/14.2.1/bits/stl_raw_storage_iter.h \
  /usr/include/c++/14.2.1/bits/align.h \
@@ -204,43 +207,14 @@ examples/simple_project/CMakeFiles/simple_project_example.dir/main.cpp.o: \
  /usr/include/c++/14.2.1/bits/ranges_algobase.h \
  /usr/include/c++/14.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.2.1/pstl/execution_defs.h \
- /home/tery/Projects/cpp/charo/include/charo/event/key.hpp \
- /usr/include/c++/14.2.1/deque /usr/include/c++/14.2.1/bits/stl_deque.h \
- /usr/include/c++/14.2.1/bits/deque.tcc /usr/include/c++/14.2.1/chrono \
- /usr/include/c++/14.2.1/bits/chrono.h /usr/include/c++/14.2.1/ratio \
- /usr/include/c++/14.2.1/limits /usr/include/c++/14.2.1/ctime \
- /usr/include/c++/14.2.1/bits/parse_numbers.h \
- /usr/include/c++/14.2.1/sstream /usr/include/c++/14.2.1/istream \
- /usr/include/c++/14.2.1/bits/istream.tcc \
- /usr/include/c++/14.2.1/bits/sstream.tcc \
- /usr/include/c++/14.2.1/bits/stl_algo.h \
- /usr/include/c++/14.2.1/bits/algorithmfwd.h \
- /usr/include/c++/14.2.1/bits/stl_heap.h \
- /usr/include/c++/14.2.1/bits/uniform_int_dist.h \
- /usr/include/c++/14.2.1/bits/chrono_io.h /usr/include/c++/14.2.1/iomanip \
- /usr/include/c++/14.2.1/locale \
- /usr/include/c++/14.2.1/bits/locale_facets_nonio.h \
- /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/time_members.h \
- /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/14.2.1/bits/codecvt.h \
- /usr/include/c++/14.2.1/bits/locale_facets_nonio.tcc \
- /usr/include/c++/14.2.1/bits/locale_conv.h \
- /usr/include/c++/14.2.1/bits/quoted_string.h \
- /usr/include/c++/14.2.1/format /usr/include/c++/14.2.1/charconv \
- /usr/include/c++/14.2.1/optional /usr/include/c++/14.2.1/span \
- /usr/include/c++/14.2.1/variant /usr/include/c++/14.2.1/bits/unicode.h \
- /usr/include/c++/14.2.1/bits/unicode-data.h \
- /home/tery/Projects/cpp/charo/include/charo/event/events.hpp \
- /usr/include/c++/14.2.1/map /usr/include/c++/14.2.1/bits/stl_tree.h \
- /usr/include/c++/14.2.1/bits/stl_map.h \
- /usr/include/c++/14.2.1/bits/stl_multimap.h \
- /home/tery/Projects/cpp/charo/include/charo/render/converter.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/escape.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/widgets.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/widgets.hpp \
  /usr/include/c++/14.2.1/thread /usr/include/c++/14.2.1/stop_token \
  /usr/include/c++/14.2.1/atomic /usr/include/c++/14.2.1/bits/std_thread.h \
  /usr/include/c++/14.2.1/semaphore \
  /usr/include/c++/14.2.1/bits/semaphore_base.h \
+ /usr/include/c++/14.2.1/bits/chrono.h /usr/include/c++/14.2.1/ratio \
+ /usr/include/c++/14.2.1/limits /usr/include/c++/14.2.1/ctime \
+ /usr/include/c++/14.2.1/bits/parse_numbers.h \
  /usr/include/c++/14.2.1/bits/atomic_timed_wait.h \
  /usr/include/c++/14.2.1/bits/this_thread_sleep.h /usr/include/sys/time.h \
  /usr/include/semaphore.h /usr/include/bits/semaphore.h

@@ -1,9 +1,8 @@
 CMakeFiles/charo.dir/src/terminal.cpp.o: \
  /home/tery/Projects/cpp/charo/src/terminal.cpp \
  /usr/include/stdc-predef.h \
- /home/tery/Projects/cpp/charo/include/charo/render/screen.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/glyphspace.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/common_types.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/terminal.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/common_types.hpp \
  /usr/include/c++/14.2.1/cstdint \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -65,10 +64,10 @@ CMakeFiles/charo.dir/src/terminal.cpp.o: \
  /usr/include/c++/14.2.1/bits/ostream_insert.h \
  /usr/include/c++/14.2.1/bits/cxxabi_forced.h \
  /usr/include/c++/14.2.1/bits/string_view.tcc \
- /home/tery/Projects/cpp/charo/include/charo/render/glyph.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/style.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/color.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/effect.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/screen.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/glyphspace.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/glyph.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/glyphstyle.hpp \
  /usr/include/c++/14.2.1/vector /usr/include/c++/14.2.1/bits/allocator.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
  /usr/include/c++/14.2.1/bits/new_allocator.h \
@@ -87,10 +86,10 @@ CMakeFiles/charo.dir/src/terminal.cpp.o: \
  /usr/include/c++/14.2.1/bits/uses_allocator.h \
  /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
  /usr/include/c++/14.2.1/tuple /usr/include/c++/14.2.1/bits/ranges_util.h \
+ /home/tery/Projects/cpp/charo/include/charo/internal/layout.hpp \
  /usr/include/c++/14.2.1/utility \
  /usr/include/c++/14.2.1/bits/stl_relops.h \
- /home/tery/Projects/cpp/charo/include/charo/terminal.hpp \
- /home/tery/Projects/cpp/charo/include/charo/context.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/context.hpp \
  /usr/include/c++/14.2.1/functional \
  /usr/include/c++/14.2.1/bits/std_function.h \
  /usr/include/c++/14.2.1/typeinfo /usr/include/c++/14.2.1/unordered_map \
@@ -101,6 +100,10 @@ CMakeFiles/charo.dir/src/terminal.cpp.o: \
  /usr/include/c++/14.2.1/bits/enable_special_members.h \
  /usr/include/c++/14.2.1/bits/node_handle.h \
  /usr/include/c++/14.2.1/bits/erase_if.h /usr/include/c++/14.2.1/array \
+ /home/tery/Projects/cpp/charo/include/charo/internal/style.hpp \
+ /usr/include/c++/14.2.1/map /usr/include/c++/14.2.1/bits/stl_tree.h \
+ /usr/include/c++/14.2.1/bits/stl_map.h \
+ /usr/include/c++/14.2.1/bits/stl_multimap.h \
  /usr/include/c++/14.2.1/memory \
  /usr/include/c++/14.2.1/bits/stl_tempbuf.h \
  /usr/include/c++/14.2.1/bits/stl_raw_storage_iter.h \
@@ -203,9 +206,9 @@ CMakeFiles/charo.dir/src/terminal.cpp.o: \
  /usr/include/c++/14.2.1/bits/ranges_algobase.h \
  /usr/include/c++/14.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.2.1/pstl/execution_defs.h \
- /home/tery/Projects/cpp/charo/include/charo/render/escape.hpp \
- /home/tery/Projects/cpp/charo/include/charo/event/events.hpp \
- /home/tery/Projects/cpp/charo/include/charo/event/key.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/escape.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/event/events.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/internal/event/key.hpp \
  /usr/include/c++/14.2.1/deque /usr/include/c++/14.2.1/bits/stl_deque.h \
  /usr/include/c++/14.2.1/bits/deque.tcc /usr/include/c++/14.2.1/chrono \
  /usr/include/c++/14.2.1/bits/chrono.h /usr/include/c++/14.2.1/ratio \
@@ -230,10 +233,7 @@ CMakeFiles/charo.dir/src/terminal.cpp.o: \
  /usr/include/c++/14.2.1/format /usr/include/c++/14.2.1/charconv \
  /usr/include/c++/14.2.1/optional /usr/include/c++/14.2.1/span \
  /usr/include/c++/14.2.1/variant /usr/include/c++/14.2.1/bits/unicode.h \
- /usr/include/c++/14.2.1/bits/unicode-data.h /usr/include/c++/14.2.1/map \
- /usr/include/c++/14.2.1/bits/stl_tree.h \
- /usr/include/c++/14.2.1/bits/stl_map.h \
- /usr/include/c++/14.2.1/bits/stl_multimap.h /usr/include/termios.h \
+ /usr/include/c++/14.2.1/bits/unicode-data.h /usr/include/termios.h \
  /usr/include/bits/termios.h /usr/include/bits/termios-struct.h \
  /usr/include/bits/termios-c_cc.h /usr/include/bits/termios-c_iflag.h \
  /usr/include/bits/termios-c_oflag.h /usr/include/bits/termios-baud.h \

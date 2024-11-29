@@ -59,24 +59,24 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/charo" TYPE FILE FILES
-    "/home/tery/Projects/cpp/charo/include/charo/terminal.hpp"
     "/home/tery/Projects/cpp/charo/include/charo/charo.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/terminal.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/widgets.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/common_types.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/glyphstyle.hpp"
     )
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/charo/event" TYPE FILE FILES
-    "/home/tery/Projects/cpp/charo/include/charo/event/key.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/event/events.hpp"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/charo/internal" TYPE FILE FILES
+    "/home/tery/Projects/cpp/charo/include/charo/internal/context.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/internal/converter.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/internal/escape.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/internal/glyph.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/internal/glyphspace.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/internal/layout.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/internal/screen.hpp"
     )
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/charo/render" TYPE FILE FILES
-    "/home/tery/Projects/cpp/charo/include/charo/render/common_types.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/converter.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/glyph.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/glyphspace.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/color.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/effect.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/style.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/escape.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/screen.hpp"
-    "/home/tery/Projects/cpp/charo/include/charo/render/widgets.hpp"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/charo/internal/event" TYPE FILE FILES
+    "/home/tery/Projects/cpp/charo/include/charo/internal/event/events.hpp"
+    "/home/tery/Projects/cpp/charo/include/charo/internal/event/key.hpp"
     )
 endif()
 
@@ -109,6 +109,12 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "/home/tery/Projects/cpp/charo/build/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()
 if(CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_COMPONENT MATCHES "^[a-zA-Z0-9_.+-]+$")
     set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
@@ -122,8 +128,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
   file(WRITE "/home/tery/Projects/cpp/charo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

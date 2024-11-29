@@ -2,7 +2,7 @@ CMakeFiles/charo.dir/src/render/escape.cpp.o: \
  /home/tery/Projects/cpp/charo/src/render/escape.cpp \
  /usr/include/stdc-predef.h \
  /home/tery/Projects/cpp/charo/include/charo/render/escape.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/common_types.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/render/../common_types.hpp \
  /usr/include/c++/14.2.1/cstdint \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -115,4 +115,4 @@ CMakeFiles/charo.dir/src/render/escape.cpp.o: \
  /usr/include/c++/14.2.1/bits/uses_allocator.h \
  /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
  /usr/include/c++/14.2.1/tuple /usr/include/c++/14.2.1/bits/ranges_util.h \
- /home/tery/Projects/cpp/charo/include/charo/render/converter.hpp
+ /home/tery/Projects/cpp/charo/include/charo/converter.hpp

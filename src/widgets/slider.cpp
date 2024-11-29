@@ -1,4 +1,4 @@
-#include <charo/render/widgets.hpp>
+#include <charo/widgets.hpp>
 
 void charo::slider(std::string_view name, float& value, float min, float max) {
     WidgetBuilder builder;
@@ -9,11 +9,11 @@ void charo::slider(std::string_view name, float& value, float min, float max) {
 
     Size widget_size;
     // widget_size.w = get_available_space().w;
-    widget_size.h = calc_str_size(name).h;
+    widget_size.y = calc_size(name).y;
 
     
     // builder.name(name);
-    // builder.size(calc_str_size(text));
+    // builder.size(calc_size(text));
     // builder.on_event("enter", [&value] { value = !value; });
 
     // Widget checkbox(builder);
@@ -23,5 +23,5 @@ void charo::slider(std::string_view name, float& value, float min, float max) {
     // auto const current_checkmark = value ? actived_checkmark : default_checkmark;
 
     // checkbox.draw(Pos{0, 0}, current_checkmark);
-    // checkbox.draw(Pos(calc_str_size(actived_checkmark).w, 0), text);
+    // checkbox.draw(Pos(calc_size(actived_checkmark).w, 0), text);
 }

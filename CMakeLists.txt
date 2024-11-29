@@ -42,37 +42,37 @@ else()
 endif()
 
 list(APPEND HEADER_FILES
-    include/charo/event/key.hpp
-    include/charo/event/events.hpp
-    include/charo/render/common_types.hpp
-    include/charo/render/converter.hpp
-    include/charo/render/glyph.hpp
-    include/charo/render/glyphspace.hpp
-    include/charo/render/color.hpp
-    include/charo/render/effect.hpp
-    include/charo/render/style.hpp
-    include/charo/render/escape.hpp
-    include/charo/render/screen.hpp
-    include/charo/render/widgets.hpp
-    include/charo/terminal.hpp
     include/charo/charo.hpp
+    include/charo/terminal.hpp
+    include/charo/widgets.hpp
+    include/charo/common_types.hpp
+    include/charo/glyphstyle.hpp
+    include/charo/internal/context.hpp
+    include/charo/internal/converter.hpp
+    include/charo/internal/escape.hpp
+    include/charo/internal/glyph.hpp
+    include/charo/internal/glyphspace.hpp
+    include/charo/internal/layout.hpp
+    include/charo/internal/screen.hpp
+    include/charo/internal/event/events.hpp
+    include/charo/internal/event/key.hpp
 )
 
 list(APPEND SOURCE_FILES
-    src/event/key.cpp
-    src/event/events.cpp
-    src/render/converter.cpp
-    src/render/glyphspace.cpp
-    src/render/escape.cpp
-    src/render/screen.cpp
-    src/render/widgets.cpp
-    
-    src/render/widgets/text.cpp
-    src/render/widgets/text_styled.cpp
-    src/render/widgets/button.cpp
-    src/render/widgets/checkbox.cpp
-
     src/terminal.cpp
+    src/widgets.cpp
+    src/internal/converter.cpp
+    src/internal/escape.cpp
+    src/internal/glyphspace.cpp
+    src/internal/screen.cpp
+    src/internal/drawables.cpp
+    src/internal/event/events.cpp
+    src/internal/event/key.cpp
+    src/widgets/button.cpp
+    src/widgets/checkbox.cpp
+    src/widgets/slider.cpp
+    src/widgets/text_styled.cpp
+    src/widgets/text.cpp
 )
 
 add_library(charo ${CHARO_LIBTYPE})
@@ -107,10 +107,6 @@ if(CHARO_OPTIMIZE AND CMAKE_BUILD_TYPE EQUAL "Release")
         # using Visual Studio C++
     endif()
 endif()
-
-# if(CHARO_OPTIMIZE_LTO)
-#     set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
-# endif()
 
 if (CHARO_THREAD_SANITAZER)
     target_compile_options(charo PRIVATE -fsanitize=thread)
@@ -151,7 +147,7 @@ if(CHARO_OPTIMIZE)
     include(CheckIPOSupported)
     check_ipo_supported(RESULT supported OUTPUT error)
 
-    if( supported )
+    if(supported)
         message(STATUS "IPO / LTO enabled")
         set_property(TARGET charo PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)
     else()

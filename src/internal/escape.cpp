@@ -1,12 +1,12 @@
-#include <charo/render/escape.hpp>
-#include <charo/render/converter.hpp>
+#include <charo/internal/escape.hpp>
+#include <charo/internal/converter.hpp>
 
 auto charo::escape::get_escape(charo::Pos pos) -> std::string {
     std::string out = "\033[" + std::to_string(pos.y + 1) + ';' + std::to_string(pos.x + 1) + 'H';
     return out;
 }
 
-auto charo::escape::get_escape(Effects flags) -> std::string {
+auto charo::escape::get_escape(Flags flags) -> std::string {
     std::string out{"\033[22;23;24;25;27;28;29;"};
     
     if (!(flags & FLAG_NONE)) {

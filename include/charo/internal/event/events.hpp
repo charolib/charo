@@ -1,6 +1,5 @@
 #pragma once
-
-#include "key.hpp"
+#include <charo/internal/event/key.hpp>
 #include <map>
 #include <string>
 #include <vector>

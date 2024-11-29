@@ -1,5 +1,4 @@
-#include <charo/event/key.hpp>
-#include <iostream>
+#include <charo/internal/event/key.hpp>
 #include <sys/select.h>
 #include <unistd.h>
 

@@ -20,7 +20,7 @@ CMakeFiles/charo.dir/src/render/widgets/button.cpp.o: \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
  /home/tery/Projects/cpp/charo/include/charo/render/effect.hpp \
- /home/tery/Projects/cpp/charo/include/charo/render/common_types.hpp \
+ /home/tery/Projects/cpp/charo/include/charo/render/../common_types.hpp \
  /usr/include/c++/14.2.1/string_view \
  /usr/include/c++/14.2.1/bits/version.h \
  /usr/include/c++/14.2.1/bits/char_traits.h \

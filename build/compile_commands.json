@@ -1,75 +1,87 @@
 [
 {
   "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/event/key.cpp.o -c /home/tery/Projects/cpp/charo/src/event/key.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/event/key.cpp",
-  "output": "CMakeFiles/charo.dir/src/event/key.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/event/events.cpp.o -c /home/tery/Projects/cpp/charo/src/event/events.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/event/events.cpp",
-  "output": "CMakeFiles/charo.dir/src/event/events.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/converter.cpp.o -c /home/tery/Projects/cpp/charo/src/render/converter.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/converter.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/converter.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/glyphspace.cpp.o -c /home/tery/Projects/cpp/charo/src/render/glyphspace.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/glyphspace.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/glyphspace.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/escape.cpp.o -c /home/tery/Projects/cpp/charo/src/render/escape.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/escape.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/escape.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/screen.cpp.o -c /home/tery/Projects/cpp/charo/src/render/screen.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/screen.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/screen.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/widgets.cpp.o -c /home/tery/Projects/cpp/charo/src/render/widgets.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/widgets.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/widgets.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/widgets/text.cpp.o -c /home/tery/Projects/cpp/charo/src/render/widgets/text.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/widgets/text.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/widgets/text.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/widgets/text_styled.cpp.o -c /home/tery/Projects/cpp/charo/src/render/widgets/text_styled.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/widgets/text_styled.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/widgets/text_styled.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/widgets/button.cpp.o -c /home/tery/Projects/cpp/charo/src/render/widgets/button.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/widgets/button.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/widgets/button.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
-  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/render/widgets/checkbox.cpp.o -c /home/tery/Projects/cpp/charo/src/render/widgets/checkbox.cpp",
-  "file": "/home/tery/Projects/cpp/charo/src/render/widgets/checkbox.cpp",
-  "output": "CMakeFiles/charo.dir/src/render/widgets/checkbox.cpp.o"
-},
-{
-  "directory": "/home/tery/Projects/cpp/charo/build",
   "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/terminal.cpp.o -c /home/tery/Projects/cpp/charo/src/terminal.cpp",
   "file": "/home/tery/Projects/cpp/charo/src/terminal.cpp",
   "output": "CMakeFiles/charo.dir/src/terminal.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/widgets.cpp.o -c /home/tery/Projects/cpp/charo/src/widgets.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/widgets.cpp",
+  "output": "CMakeFiles/charo.dir/src/widgets.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/internal/converter.cpp.o -c /home/tery/Projects/cpp/charo/src/internal/converter.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/internal/converter.cpp",
+  "output": "CMakeFiles/charo.dir/src/internal/converter.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/internal/escape.cpp.o -c /home/tery/Projects/cpp/charo/src/internal/escape.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/internal/escape.cpp",
+  "output": "CMakeFiles/charo.dir/src/internal/escape.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/internal/glyphspace.cpp.o -c /home/tery/Projects/cpp/charo/src/internal/glyphspace.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/internal/glyphspace.cpp",
+  "output": "CMakeFiles/charo.dir/src/internal/glyphspace.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/internal/screen.cpp.o -c /home/tery/Projects/cpp/charo/src/internal/screen.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/internal/screen.cpp",
+  "output": "CMakeFiles/charo.dir/src/internal/screen.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/internal/drawables.cpp.o -c /home/tery/Projects/cpp/charo/src/internal/drawables.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/internal/drawables.cpp",
+  "output": "CMakeFiles/charo.dir/src/internal/drawables.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/internal/event/events.cpp.o -c /home/tery/Projects/cpp/charo/src/internal/event/events.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/internal/event/events.cpp",
+  "output": "CMakeFiles/charo.dir/src/internal/event/events.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/internal/event/key.cpp.o -c /home/tery/Projects/cpp/charo/src/internal/event/key.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/internal/event/key.cpp",
+  "output": "CMakeFiles/charo.dir/src/internal/event/key.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/widgets/button.cpp.o -c /home/tery/Projects/cpp/charo/src/widgets/button.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/widgets/button.cpp",
+  "output": "CMakeFiles/charo.dir/src/widgets/button.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/widgets/checkbox.cpp.o -c /home/tery/Projects/cpp/charo/src/widgets/checkbox.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/widgets/checkbox.cpp",
+  "output": "CMakeFiles/charo.dir/src/widgets/checkbox.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/widgets/slider.cpp.o -c /home/tery/Projects/cpp/charo/src/widgets/slider.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/widgets/slider.cpp",
+  "output": "CMakeFiles/charo.dir/src/widgets/slider.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/widgets/text_styled.cpp.o -c /home/tery/Projects/cpp/charo/src/widgets/text_styled.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/widgets/text_styled.cpp",
+  "output": "CMakeFiles/charo.dir/src/widgets/text_styled.cpp.o"
+},
+{
+  "directory": "/home/tery/Projects/cpp/charo/build",
+  "command": "/usr/bin/c++  -I/home/tery/Projects/cpp/charo/include -O3 -DNDEBUG -std=c++20 -flto=auto -fno-fat-lto-objects -fPIC -fdiagnostics-color=always -Wall -Wextra -Wpedantic -o CMakeFiles/charo.dir/src/widgets/text.cpp.o -c /home/tery/Projects/cpp/charo/src/widgets/text.cpp",
+  "file": "/home/tery/Projects/cpp/charo/src/widgets/text.cpp",
+  "output": "CMakeFiles/charo.dir/src/widgets/text.cpp.o"
 },
 {
   "directory": "/home/tery/Projects/cpp/charo/build/examples/simple_project",
